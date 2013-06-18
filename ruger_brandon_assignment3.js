@@ -24,12 +24,17 @@ var bankRobber = {
 var wasBankRobbed = function(){
     if (bankRobber.mask === true) {
         console.log("I think he's going to rob us! - Shouted one of the employees.");
+        if (bankRobber.gun === true) { //Nested conditional
+            console.log("He's got a gun!");
+        } else {
+                console.log("Just stay calm. Give him whatever he asks for and we will all be okay.");
+        };
         return true;
     } else {
         console.log("He is probably just looking for help. Let's see what he needs.");
         return false;
     };
-}
+};
 
 // Number Argument
 var getMoneyStolen = function (howMuchMoney){
@@ -50,6 +55,8 @@ var getMoneyStolen = function (howMuchMoney){
 console.log("I was working at " + bankName + " bank on " + bankLocation + " and a strange man was walking around the building.");
 console.log("There had been a lot of local bank robberies lately, so all of my co-workers were on edge.");
 var areWeGettingRobbed = wasBankRobbed();
+console.log("It's " + areWeGettingRobbed + " that we got robbed.");
+
 
 console.log("Here was his description:");
 
@@ -58,5 +65,10 @@ console.log("Here was his description:");
 for (var key in bankRobber) {
     console.log(key + ":" + bankRobber[key]);
 };
+
+var moneyStolen = getMoneyStolen(5000);
+console.log("He stole " + howMuchMoney + " dollars.");
+
+
 
             
