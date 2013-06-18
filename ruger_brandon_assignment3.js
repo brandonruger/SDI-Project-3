@@ -6,6 +6,8 @@
 
 // Global Variables
 
+var bankLocation = "Main Street";
+var bankName = "Wells Fargo";
 var bankRobber = {
     height: "6 feet 2 inches",
     "skin color": "black",
@@ -34,7 +36,7 @@ var getMoneyStolen = function (howMuchMoney){
 
 // Main Code
 
-console.log("Last night I had a nightmare. I was working at a bank and a masked man came inside to rob us.");
+console.log("Last night I had a nightmare. I was working at " + bankName + " on " + bankLocation + " and a masked man came inside to rob us.");
 console.log("Here was his description:");
 
 // For Loop
