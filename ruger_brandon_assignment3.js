@@ -8,7 +8,7 @@
 
 var bankRobber = {
     height: "6 feet 2 inches",
-    skinColor: "black",
+    "skin color": "black",
     age: 30,
     mask: true,
     gloves: true,
@@ -34,7 +34,13 @@ var getMoneyStolen = function (howMuchMoney){
 
 // Main Code
 
-console.log("Last night I had a nightmare. I was working at a bank and a " + bankRobber + "came inside to rob us.");
+console.log("Last night I had a nightmare. I was working at a bank and a masked man came inside to rob us.");
+console.log("Here was his description:");
 
+// For Loop
+
+for (var key in bankRobber) {
+    console.log(key + ":" + bankRobber[key]);
+};
 
             
