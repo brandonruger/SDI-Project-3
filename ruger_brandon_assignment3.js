@@ -20,6 +20,17 @@ var bankRobber = {
 
 // Functions
 
+// Boolean Argument
+var wasBankRobbed = function(){
+    if (bankRobber.mask === true) {
+        console.log("I think he's going to rob us! - Shouted one of the employees.");
+        return true;
+    } else {
+        console.log("He is probably just looking for help. Let's see what he needs.");
+        return false;
+    };
+}
+
 // Number Argument
 var getMoneyStolen = function (howMuchMoney){
     if (howMuchMoney < 1000) {
@@ -36,7 +47,10 @@ var getMoneyStolen = function (howMuchMoney){
 
 // Main Code
 
-console.log("Last night I had a nightmare. I was working at " + bankName + " on " + bankLocation + " and a masked man came inside to rob us.");
+console.log("I was working at " + bankName + " bank on " + bankLocation + " and a strange man was walking around the building.");
+console.log("There had been a lot of local bank robberies lately, so all of my co-workers were on edge.");
+var areWeGettingRobbed = wasBankRobbed();
+
 console.log("Here was his description:");
 
 // For Loop
