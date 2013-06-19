@@ -53,6 +53,8 @@ var baitStrap;
 var atmMachine;
 
 
+
+
 // Functions
 
 // Boolean Argument
@@ -84,7 +86,7 @@ var getMoneyStolen = function (howMuchMoney){
 // Array Function
 var whichOfficersArrived = function(copsWhoShowUp){
     console.log("The following officers arrived at the scene: " + copsWhoShowUp + ".")// Array argument
-    return whichOfficersArrived;
+    return whichOfficersArrived; // Return Array
 };
 
 
