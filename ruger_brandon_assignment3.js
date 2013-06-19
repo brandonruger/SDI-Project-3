@@ -6,6 +6,23 @@
 
 // Global Variables
 
+var json = {
+    "tellers":[
+        {
+            "tellerFirstName": "Britney",
+            "tellerLastName": "Stevens"
+        },
+        {
+            "tellerFirstName": "Abigail",
+            "tellerLastName": "Bruce"
+        },
+        {
+            "tellerFirstName": "Michelle",
+            "tellerLastName": "Stanford"
+        }
+    ]
+};
+
 var bankLocation = "Main Street";
 var bankName = "Wells Fargo";
 var bankRobber = {
@@ -17,6 +34,9 @@ var bankRobber = {
     gun: false
     
 };
+
+//var vaultCombo = 
+
 
 // Functions
 
@@ -54,6 +74,8 @@ var getMoneyStolen = function (howMuchMoney){
 
 console.log("I was working at " + bankName + " bank on " + bankLocation + " and a strange man was walking around the building.");
 console.log("There had been a lot of local bank robberies lately, so all of my co-workers were on edge.");
+console.log("The tellers working that day were " + json.tellers[0].tellerFirstName + ", " + json.tellers[1].tellerFirstName + ", and " +
+            json.tellers[2].tellerFirstName);
 var areWeGettingRobbed = wasBankRobbed();
 console.log("It's " + areWeGettingRobbed + " that we got robbed.");
 
