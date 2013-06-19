@@ -7,7 +7,7 @@
 // Global Variables
 
 var json = {
-    "tellers":[
+    "tellers":[ // Property: Array
         {
             "tellerFirstName": "Britney",
             "tellerLastName": "Stevens"
@@ -26,10 +26,10 @@ var json = {
 var bankLocation = "Main Street";
 var bankName = "Wells Fargo";
 var bankRobber = {
-    height: "6 feet 2 inches",
+    height: "6 feet 2 inches", // Property: String
     "skin color": "black",
-    age: 30,
-    mask: true,
+    age: 30, // Property: Number
+    mask: true, // Property: Boolean
     gloves: true,
     gun: false
     
@@ -42,9 +42,15 @@ var vaultCombo = {
     getCombo: function(){ // Method: Function
         var finalCombo = this.firstPart + this.secondPart + this.thirdPart;
         
-        return finalCombo;
+        return finalCombo; // Return string
     }
 };
+
+var copsWhoShowUp = ["Officer Jones", "Officer Ryder", "Officer Montgomery"];
+
+var baitStrap;
+
+var atmMachine;
 
 
 // Functions
@@ -58,7 +64,7 @@ var wasBankRobbed = function(){
         } else {
                 console.log("Just stay calm. Give him whatever he asks for and we will all be okay.");
         };
-        return true;
+        return true; // Return Boolean
     } else {
         console.log("He is probably just looking for help. Let's see what he needs.");
         return false;
@@ -67,13 +73,27 @@ var wasBankRobbed = function(){
 
 // Number Argument
 var getMoneyStolen = function (howMuchMoney){
-    if (howMuchMoney < 1000) {
+    if (howMuchMoney < 1000) { // Conditional
         console.log("He stole less than $1,000 dollars.");
     } else {
         console.log("He stole more than $1,000 dollars.");
     }
     return howMuchMoney; // Return Number
 };
+
+// Array Function
+var whichOfficersArrived = function(copsWhoShowUp){
+    console.log("The following officers arrived at the scene: " + copsWhoShowUp + ".")// Array argument
+    return whichOfficersArrived;
+};
+
+
+// String Argument
+
+
+
+
+// Object Argument
 
 
     
@@ -110,6 +130,11 @@ console.log(json.tellers[2].tellerFirstName + " had the second part of the combi
 console.log(json.tellers[1].tellerFirstName + " had the third and final part of the combination.");
 var whatIsCombo = vaultCombo.getCombo();
 console.log("When they put them together, they get the final combo, " + whatIsCombo + ".");
+
+
+console.log("We rang the alarm to alert the cops that we needed help.");
+console.log("The police called us and said there were 3 officers close by who should be arriving momentarily.");
+var cops = whichOfficersArrived(copsWhoShowUp);
 
 
 
