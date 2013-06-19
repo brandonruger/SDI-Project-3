@@ -42,15 +42,27 @@ var vaultCombo = {
     getCombo: function(){ // Method: Function
         var finalCombo = this.firstPart + this.secondPart + this.thirdPart;
         
-        return finalCombo; // Return string
+        return finalCombo // Return string
     }
 };
 
 var copsWhoShowUp = ["Officer Jones", "Officer Ryder", "Officer Montgomery"];
 
-var baitStrap;
+var baitStrap = function(){
+    
+};
 
-var atmMachine;
+var strangeBox = {
+    height: 1,
+    width:  2,
+    length: 3,
+    getArea: function(){ // Method: Accessor
+        var totalArea = this.height * this.width * this.length; // Math
+        
+        return totalArea;
+    } // End method accessor
+};
+
 
 
 
@@ -71,7 +83,9 @@ var wasBankRobbed = function(){
         console.log("He is probably just looking for help. Let's see what he needs.");
         return false;
     };
-};
+}; // end function
+
+
 
 // Number Argument
 var getMoneyStolen = function (howMuchMoney){
@@ -81,13 +95,17 @@ var getMoneyStolen = function (howMuchMoney){
         console.log("He stole more than $1,000 dollars.");
     }
     return howMuchMoney; // Return Number
-};
+}; // end function
+
+
 
 // Array Function
 var whichOfficersArrived = function(copsWhoShowUp){
     console.log("The following officers arrived at the scene: " + copsWhoShowUp + ".")// Array argument
     return whichOfficersArrived; // Return Array
-};
+}; // end function
+
+
 
 
 // String Argument
@@ -96,6 +114,7 @@ var whichOfficersArrived = function(copsWhoShowUp){
 
 
 // Object Argument
+var robAtmMachine= function(whatATM)
 
 
     
@@ -103,7 +122,7 @@ var whichOfficersArrived = function(copsWhoShowUp){
 
 // Main Code
 
-console.log("I was working at " + bankName + " bank on " + bankLocation + " and a strange man was walking around the building.");
+console.log("I was covering a shift at " + bankName + " bank on " + bankLocation + " when we noticed a strange man walking around the building.");
 console.log("There had been a lot of local bank robberies lately, so all of my co-workers were on edge.");
 console.log("The tellers working that day were " + json.tellers[0].tellerFirstName + ", " + json.tellers[1].tellerFirstName + ", and " +
             json.tellers[2].tellerFirstName + ".");
@@ -134,9 +153,20 @@ var whatIsCombo = vaultCombo.getCombo();
 console.log("When they put them together, they get the final combo, " + whatIsCombo + ".");
 
 
+console.log("He also forced us to unlock the ATM machine.");
+
+var sizeOfBox = strangeBox.getArea();
+console.log("Before he left, he left a strange box that he claimed contained an explosive device.");
+console.log("The area of the box was approximately " + sizeOfBox + " feet.");
+
+
 console.log("We rang the alarm to alert the cops that we needed help.");
 console.log("The police called us and said there were 3 officers close by who should be arriving momentarily.");
 var cops = whichOfficersArrived(copsWhoShowUp);
+
+
+
+
 
 
 
