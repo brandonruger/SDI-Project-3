@@ -35,7 +35,16 @@ var bankRobber = {
     
 };
 
-//var vaultCombo = 
+var vaultCombo = {
+    firstPart: "145",
+    secondPart: "982",
+    thirdPart: "143",
+    getCombo: function(){ // Method: Function
+        var finalCombo = this.firstPart + this.secondPart + this.thirdPart;
+        
+        return finalCombo;
+    }
+};
 
 
 // Functions
@@ -62,7 +71,7 @@ var getMoneyStolen = function (howMuchMoney){
         console.log("He stole less than $1,000 dollars.");
     } else {
         console.log("He stole more than $1,000 dollars.");
-    };
+    }
     return howMuchMoney; // Return Number
 };
 
@@ -75,7 +84,7 @@ var getMoneyStolen = function (howMuchMoney){
 console.log("I was working at " + bankName + " bank on " + bankLocation + " and a strange man was walking around the building.");
 console.log("There had been a lot of local bank robberies lately, so all of my co-workers were on edge.");
 console.log("The tellers working that day were " + json.tellers[0].tellerFirstName + ", " + json.tellers[1].tellerFirstName + ", and " +
-            json.tellers[2].tellerFirstName);
+            json.tellers[2].tellerFirstName + ".");
 var areWeGettingRobbed = wasBankRobbed();
 console.log("It's " + areWeGettingRobbed + " that we got robbed.");
 
@@ -89,7 +98,20 @@ for (var key in bankRobber) {
 };
 
 var moneyStolen = getMoneyStolen(5000);
-console.log("He stole " + howMuchMoney + " dollars.");
+console.log("He stole " + moneyStolen + " dollars.");
+
+// End for loop
+
+// More Main Code
+
+console.log("The robber forced us to open the vault. The vault combination was broken into 3 distinct parts, divided up amongst 3 staff members.");
+console.log(json.tellers[0].tellerFirstName + " had the first part of the combination.");
+console.log(json.tellers[2].tellerFirstName + " had the second part of the combination.");
+console.log(json.tellers[1].tellerFirstName + " had the third and final part of the combination.");
+var whatIsCombo = vaultCombo.getCombo();
+console.log("When they put them together, they get the final combo, " + whatIsCombo + ".");
+
+
 
 
 
