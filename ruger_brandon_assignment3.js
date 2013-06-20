@@ -164,9 +164,8 @@ var practiceFunction = testFunction();*/
 // Main Code
 
 var newJob = bank.name("Wells Fargo");
-
+console.log("It was a Friday morning, right after we opened. Our hours on Fridays are " + bank.hours.friday + ", so it had to be after 9 am.");    
 console.log("I was covering a shift at the " + bank.location + " branch when we noticed a strange man walking around the building.");
-console.log("It was a Friday morning, right after we opened. Our hours on Fridays are " + bank.hours.friday + ".");    
 console.log("There had been a lot of local bank robberies lately, so all of my co-workers were on edge.");
 console.log("The tellers working that day were " + json.tellers[0].tellerFirstName + ", " + json.tellers[1].tellerFirstName + ", and " +
             json.tellers[2].tellerFirstName + ".");
@@ -182,8 +181,6 @@ for (var key in bankRobber) {
     console.log(key + ":" + bankRobber[key]);
 };
 
-var moneyStolen = getMoneyStolen(5000);
-console.log("He stole " + moneyStolen + " dollars.");
 
 // End for loop
 
@@ -200,17 +197,22 @@ console.log("When they put them together, they get the final combo, " + whatIsCo
 console.log("He also forced us to unlock the ATM machine.");
 var getMoneyStolenFromATM = billsInsideAtmMachine.billsStolen();
 
+var moneyStolen = getMoneyStolen(5000);
+console.log("He stole " + moneyStolen + " dollars.");
+
 
 var sizeOfBox = strangeBox.getArea();
 console.log("Before he left, he left a strange box that he claimed contained an explosive device.");
-console.log("When asked to recall the size of the box, " + json.tellers[0].tellerFirstName + " guessed the area of the box was approximately " + sizeOfBox + " feet.");
-strangeBox.getAreaGuess2(4);
-console.log("When the police asked " + json.tellers[2].tellerFirstName + ", she guessed that the area of the box was approximately " + strangeBox.getArea() + " feet.");
-
 
 console.log("We rang the alarm to alert the cops that we needed help.");
 console.log("The police called us and said there were 3 officers close by who should be arriving momentarily.");
 var cops = whichOfficersArrived(copsWhoShowUp);
+
+console.log("When the cops asked us to recall the size of the box for the supposed explosive device, " + json.tellers[0].tellerFirstName + " guessed the area of the box was approximately " + sizeOfBox + " feet.");
+strangeBox.getAreaGuess2(4);
+console.log(json.tellers[2].tellerFirstName + " guessed that the area of the box was approximately " + strangeBox.getArea() + " feet.");
+
+
 
 
 
