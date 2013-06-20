@@ -23,8 +23,23 @@ var json = {
     ]
 };
 
-var bankLocation = "Main Street";
-var bankName = "Wells Fargo";
+var bank = {
+    name: "Wells Fargo",
+    location: "Main Street",
+    hours: { // Property: Object
+        monday:    "9-5",
+        tuesday:   "9-6",
+        wednesday: "9-5",
+        thursday:  "9-4",
+        friday:    "9-7",
+        saturday:  "8-1",
+        sunday:    "closed"
+    },
+    
+}; //end object    
+    
+    
+    
 var bankRobber = {
     height: "6 feet 2 inches", // Property: String
     "skin color": "black",
@@ -114,15 +129,14 @@ var whichOfficersArrived = function(copsWhoShowUp){
 
 
 // Object Argument
-var robAtmMachine= function(whatATM)
-
 
     
 
 
 // Main Code
 
-console.log("I was covering a shift at " + bankName + " bank on " + bankLocation + " when we noticed a strange man walking around the building.");
+console.log("I was covering a shift at " + bank.name + " bank on " + bank.location + " when we noticed a strange man walking around the building.");
+console.log("It was a Friday morning, right after we opened. Our hours on Fridays are " + bank.hours.friday + ".");    
 console.log("There had been a lot of local bank robberies lately, so all of my co-workers were on edge.");
 console.log("The tellers working that day were " + json.tellers[0].tellerFirstName + ", " + json.tellers[1].tellerFirstName + ", and " +
             json.tellers[2].tellerFirstName + ".");
