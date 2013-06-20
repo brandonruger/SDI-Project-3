@@ -138,14 +138,27 @@ var getMoneyStolen = function (howMuchMoney){
 
 // Array Function
 var whichOfficersArrived = function(copsWhoShowUp){
-    console.log("The following officers arrived at the scene: " + copsWhoShowUp + ".")// Array argument
+    console.log("The following officers arrived at the scene: " + copsWhoShowUp + ".") // Array argument
     return whichOfficersArrived; // Return Array
 }; // end function
 
 
-// Object Argument
 
+
+// Object Argument
+/*var newSecurityMeasures={
+    "security guard": "John",
+    "door": "buzzer for the door"
     
+};
+var testFunction = function(security){
+    var security = newSecurityMeasures;
+    console.log ("These are the objects we bought:" + newSecurityMeasures + ".");
+};
+
+var practiceFunction = testFunction();*/
+
+
 
 
 // Main Code
