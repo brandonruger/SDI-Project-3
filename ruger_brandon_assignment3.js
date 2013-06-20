@@ -24,7 +24,11 @@ var json = {
 };
 
 var bank = {
-    name: "Wells Fargo",
+    name: function(whatBank){ // Argument: String
+        console.log("Recently I started working a new job as a banker at " + whatBank + ".");
+        
+        return whatBank; // Return String
+    },
     location: "Main Street",
     hours: {// Property: Object
         monday:    "9-5",
@@ -35,6 +39,7 @@ var bank = {
         saturday:  "8-1",
         sunday:    "closed",
     }
+    
     
 }; //end object    
     
@@ -138,13 +143,6 @@ var whichOfficersArrived = function(copsWhoShowUp){
 }; // end function
 
 
-
-
-// String Argument
-
-
-
-
 // Object Argument
 
     
@@ -152,7 +150,9 @@ var whichOfficersArrived = function(copsWhoShowUp){
 
 // Main Code
 
-console.log("I was covering a shift at " + bank.name + " bank on " + bank.location + " when we noticed a strange man walking around the building.");
+var newJob = bank.name("Wells Fargo");
+
+console.log("I was covering a shift at the " + bank.location + " branch when we noticed a strange man walking around the building.");
 console.log("It was a Friday morning, right after we opened. Our hours on Fridays are " + bank.hours.friday + ".");    
 console.log("There had been a lot of local bank robberies lately, so all of my co-workers were on edge.");
 console.log("The tellers working that day were " + json.tellers[0].tellerFirstName + ", " + json.tellers[1].tellerFirstName + ", and " +
