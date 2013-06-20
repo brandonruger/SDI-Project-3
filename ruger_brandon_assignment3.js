@@ -26,19 +26,36 @@ var json = {
 var bank = {
     name: "Wells Fargo",
     location: "Main Street",
-    hours: { // Property: Object
+    hours: {// Property: Object
         monday:    "9-5",
         tuesday:   "9-6",
         wednesday: "9-5",
         thursday:  "9-4",
         friday:    "9-7",
         saturday:  "8-1",
-        sunday:    "closed"
-    },
+        sunday:    "closed",
+    }
     
 }; //end object    
     
+var billsInsideAtmMachine = {
+    ones: 2000,
+    fives: 1000,
+    tens: 1000,
+    twenties: 10000,
     
+    billsStolen: function(){ // Method: Procedure
+        
+        var packOfTwenties = 0;
+        console.log("Each pack of twenties contains $1000 dollars.");
+        while (packOfTwenties <= this.twenties) { // While Loop
+            console.log("He stole another pack of twenties!");
+            
+            packOfTwenties +=1000;
+        };
+    }
+};
+
     
 var bankRobber = {
     height: "6 feet 2 inches", // Property: String
@@ -63,9 +80,6 @@ var vaultCombo = {
 
 var copsWhoShowUp = ["Officer Jones", "Officer Ryder", "Officer Montgomery"];
 
-var baitStrap = function(){
-    
-};
 
 var strangeBox = {
     height: 1,
@@ -75,9 +89,12 @@ var strangeBox = {
         var totalArea = this.height * this.width * this.length; // Math
         
         return totalArea;
-    } // End method accessor
+    }, // End method accessor
+    
+    getAreaGuess2: function(newLength){ // Method: Mutator
+        strangeBox.length = newLength;
+    }
 };
-
 
 
 
@@ -168,10 +185,14 @@ console.log("When they put them together, they get the final combo, " + whatIsCo
 
 
 console.log("He also forced us to unlock the ATM machine.");
+var getMoneyStolenFromATM = billsInsideAtmMachine.billsStolen();
+
 
 var sizeOfBox = strangeBox.getArea();
 console.log("Before he left, he left a strange box that he claimed contained an explosive device.");
-console.log("The area of the box was approximately " + sizeOfBox + " feet.");
+console.log("When asked to recall the size of the box, " + json.tellers[0].tellerFirstName + " guessed the area of the box was approximately " + sizeOfBox + " feet.");
+strangeBox.getAreaGuess2(4);
+console.log("When the police asked " + json.tellers[2].tellerFirstName + ", she guessed that the area of the box was approximately " + strangeBox.getArea() + " feet.");
 
 
 console.log("We rang the alarm to alert the cops that we needed help.");
