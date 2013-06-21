@@ -145,6 +145,12 @@ var whichOfficersArrived = function(copsWhoShowUp){
     return whichOfficersArrived; // Return Array
 }; // end function
 
+// Object Function
+var jsonFunction = function(jsonTellers){ //Argument: object
+    var jsonTellers = json.tellers;
+    json.tellers.pop();
+    return json.tellers; //Return: object
+};
 
 
 
@@ -167,8 +173,6 @@ console.log("Here was his description:");
 for (var key in bankRobber) {
     console.log(key + ":" + bankRobber[key]);
 };
-
-
 // End for loop
 
 // More Main Code
@@ -200,11 +204,6 @@ strangeBox.getAreaGuess2(4);
 console.log(json.tellers[2].tellerFirstName + " guessed that the area of the box was approximately " + strangeBox.getArea() + " feet.");
 
 
-var jsonFunction = function(jsonTellers){ //Argument: object
-    var jsonTellers = json.tellers;
-    json.tellers.pop();
-    return json.tellers; //Return: object
-};
 
 console.log("After the robbery, " + json.tellers[1].tellerFirstName + " decided to resign due to the stress.");
 var newTellers = jsonFunction(json.tellers);
