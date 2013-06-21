@@ -23,6 +23,7 @@ var json = {
     ]
 };
 
+
 var bank = {
     name: function(whatBank){ // Argument: String
         console.log("Recently I started working a new job as a banker at " + whatBank + ".");
@@ -138,25 +139,11 @@ var getMoneyStolen = function (howMuchMoney){
 
 // Array Function
 var whichOfficersArrived = function(copsWhoShowUp){
-    console.log("The following officers arrived at the scene: " + copsWhoShowUp + ".") // Array argument
+    console.log("The following officers arrived at the scene:")
+    copsWhoShowUp.push("Officer Michaels");
+    console.log(copsWhoShowUp); // Array argument
     return whichOfficersArrived; // Return Array
 }; // end function
-
-
-
-
-// Object Argument
-/*var newSecurityMeasures={
-    "security guard": "John",
-    "door": "buzzer for the door"
-    
-};
-var testFunction = function(security){
-    var security = newSecurityMeasures;
-    console.log ("These are the objects we bought:" + newSecurityMeasures + ".");
-};
-
-var practiceFunction = testFunction();*/
 
 
 
@@ -213,8 +200,16 @@ strangeBox.getAreaGuess2(4);
 console.log(json.tellers[2].tellerFirstName + " guessed that the area of the box was approximately " + strangeBox.getArea() + " feet.");
 
 
+var jsonFunction = function(jsonTellers){ //Argument: object
+    var jsonTellers = json.tellers;
+    json.tellers.pop();
+    return json.tellers; //Return: object
+};
 
-
+console.log("After the robbery, " + json.tellers[1].tellerFirstName + " decided to resign due to the stress.");
+var newTellers = jsonFunction(json.tellers);
+console.log("Now we only have 2 tellers:");
+console.log(json.tellers)
 
 
 
