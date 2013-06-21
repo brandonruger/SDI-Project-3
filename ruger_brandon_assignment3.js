@@ -145,12 +145,13 @@ var whichOfficersArrived = function(copsWhoShowUp){
     return whichOfficersArrived; // Return Array
 }; // end function
 
+
 // Object Function
 var jsonFunction = function(jsonTellers){ //Argument: object
     var jsonTellers = json.tellers;
     json.tellers.pop();
     return json.tellers; //Return: object
-};
+}; // end function
 
 
 
