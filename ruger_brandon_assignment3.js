@@ -53,7 +53,7 @@ var billsInsideAtmMachine = {
     billsStolen: function(){ // Method: Procedure
         
         var packOfTwenties = 0;
-        console.log("Each pack of twenties contains $1000 dollars.");
+        console.log("Each pack of twenties in the ATM contains $1000 dollars.");
         while (packOfTwenties <= this.twenties) { // While Loop
             console.log("He stole another pack of twenties!");
             
@@ -110,7 +110,7 @@ var strangeBox = {
 // Boolean Argument
 var wasBankRobbed = function(){
     if (bankRobber.mask === true) {
-        console.log("I think he's going to rob us! - Shouted one of the employees.");
+        console.log("\"I think he's going to rob us!\" - Shouted one of the employees.");
         if (bankRobber.gun === true) { //Nested conditional
             console.log("He's got a gun!");
         } else {
@@ -157,10 +157,10 @@ var jsonFunction = function(jsonTellers){ //Argument: object
 // Main Code
 
 var newJob = bank.name("Wells Fargo");
-console.log("It was a Friday morning, right after we opened. Our hours on Fridays are " + bank.hours.friday + ", so it had to be after 9 am.");    
+console.log("It was a Friday morning, right after we opened. Our hours on Fridays are " + bank.hours.friday + ", so it had to be sometime after 9 am.");    
 console.log("I was covering a shift at the " + bank.location + " branch when we noticed a strange man walking around the building.");
 console.log("There had been a lot of local bank robberies lately, so all of my co-workers were on edge.");
-console.log("The tellers working that day were " + json.tellers[0].tellerFirstName + ", " + json.tellers[1].tellerFirstName + ", and " +
+console.log("The tellers working were " + json.tellers[0].tellerFirstName + ", " + json.tellers[1].tellerFirstName + ", and " +
             json.tellers[2].tellerFirstName + ".");
 var areWeGettingRobbed = wasBankRobbed();
 console.log("It's " + areWeGettingRobbed + " that we got robbed.");
@@ -188,27 +188,30 @@ console.log("When they put them together, they get the final combo, " + whatIsCo
 console.log("He also forced us to unlock the ATM machine.");
 var getMoneyStolenFromATM = billsInsideAtmMachine.billsStolen();
 
-var moneyStolen = getMoneyStolen(5000);
-console.log("He stole " + moneyStolen + " dollars.");
+var moneyStolen = getMoneyStolen(15000);
+console.log("Counting money from the vault and the ATM machine, we believe he stole over " + moneyStolen + " dollars.");
 
 
 var sizeOfBox = strangeBox.getArea();
-console.log("Before he left, he left a strange box that he claimed contained an explosive device.");
+console.log("He also carried with him a strange box that he claimed contained an explosive device.");
+console.log("Luckily he took it with him when he left.")
 
 console.log("We rang the alarm to alert the cops that we needed help.");
-console.log("The police called us and said there were 3 officers close by who should be arriving momentarily.");
+console.log("The police called us and said there were officers close by who should be arriving momentarily.");
 var cops = whichOfficersArrived(copsWhoShowUp);
 
 console.log("When the cops asked us to recall the size of the box for the supposed explosive device, " + json.tellers[0].tellerFirstName + " guessed the area of the box was approximately " + sizeOfBox + " feet.");
 strangeBox.getAreaGuess2(4);
 console.log(json.tellers[2].tellerFirstName + " guessed that the area of the box was approximately " + strangeBox.getArea() + " feet.");
+console.log("We were forced to evacuate while the police and the bomb squad searched the premises.");
 
 
 
-console.log("After the robbery, " + json.tellers[1].tellerFirstName + " decided to resign due to the stress.");
+console.log("After the robbery, " + json.tellers[1].tellerFirstName + " decided to resign due to the stress this whole event caused her.");
 var newTellers = jsonFunction(json.tellers);
 console.log("Now we only have 2 tellers:");
 console.log(json.tellers)
+console.log("This was a scary situation that we all went through, but I am so glad that nobody got hurt!");
 
 
 
